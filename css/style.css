@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto/') format('woff2'),
+      url('/font/Roboto/Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto/Roboto-Bold.woff2') format('woff2'),
+      url('/font/Roboto/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/font/Roboto/Roboto-Medium.woff2') format('woff2'),
+      url('/font/Roboto/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+ 
+ /* GENERAL */
+ html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: rgb(235, 146, 161);
+  color: #222;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* CONTAINER */
+
+.container {
+  max-width: 840px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-navs {
+  display: flex;
+  padding-top: 50px;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: aliceblue;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.site-title:hover {
+  opacity: 0.8;
+}
+
+.site-title:active {
+  opacity: 1;
+}
+
+.site-title:focus {
+  opacity: 1;
+}
+
+.site-title:not(:first-child) {
+  margin-left: 40px;
+}
+
+.site-text {
+  margin: 0;
+  padding: 0;
+  color: #eee;
+}
+
+.timer {
+  padding-top: 80px;
+}
+
+.timer-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.timer-card {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 60px;
+  padding-right: 90px;
+}
+
+.timer-card:last-child {
+  position: relative;
+  background-color: #222;
+}
+
+.timer-card:nth-child(2) {
+  background-color: #333;
+}
+
+.timer-card:nth-child(1) {
+  background-color: #444;
+  position: relative;
+}
+
+.start-button {
+  position: absolute;
+  padding: 14px 83px;
+  text-transform: uppercase;
+  background-color: #111;
+  bottom: -20px;
+  left: 16px;
+  color: #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 4px 5px 25px -9px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 4px 5px 25px -9px rgba(0,0,0,0.7);
+  -moz-box-shadow: 4px 5px 25px -9px rgba(0,0,0,0.7);
+  cursor: pointer;
+}
+
+.start-button:hover {
+  margin-bottom: 1px;
+}
+
+.left-vector {
+  display: inline-block;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: -90px;
+  width: 90px;
+  height: 90px;
+  padding: 40px;
+  background-color: rgb(241, 236, 236);
+  background-image: url(/img/icon/left-arrow.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.left-vector:hover {
+  opacity: 1;
+}
+
+.right-vector {
+  display: inline-block;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: -90px;
+  width: 90px;
+  height: 90px;
+  padding: 40px;
+  background-color: rgb(241, 236, 236);
+  background-image: url(/img/icon/right-arrow.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: opacity 0.3s ease;
+  opacity: 0.5;
+  cursor: pointer; 
+}
+
+.right-vector:hover {
+  opacity: 1;
+}
+
+.left-vector:hover, right-vector:hover {
+  opacity: 1;
+}
+
+.timer-section-title {
+  margin: 0;
+  padding: 0;
+  color: rgb(235, 146, 161);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.timer-section-text {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+}
